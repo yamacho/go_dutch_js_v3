@@ -28,3 +28,22 @@ body {
 #num, #unit {
   width: 110px;
 }
+
+#btn {
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  background: #3897fd;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+
+.input-area {
+  font-size: 0;
+  margin-bottom: 20px;
+}
