@@ -19,9 +19,14 @@
     short = price.value - (payLess * num.value);
     payMore = Math.ceil((price.value / num.value) / unit.value) * unit.value;
     over = Math.abs(price.value - (payMore * num.value));
-    str =
-      '一人 ' + payLess + ' 円だと ' + short + ' 円足りません。' +
-      '一人 ' + payMore + ' 円だと ' + over + ' 円余ります。';
+
+    if (short === 0 && over === 0 ) {
+      str = '一人 ' + (price.value / num.value) + ' 円ちょうどです。';
+    } else {
+      str =
+        '一人 ' + payLess + ' 円だと ' + short + ' 円足りません。' +
+        '一人 ' + payMore + ' 円だと ' + over + ' 円余ります。';
+    }
     result.textContent = str;
   });
 })();
