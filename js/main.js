@@ -9,6 +9,12 @@
   var reset = document.getElementById('reset');
 
   function checkInput() {
+    if (price.value.match(/^[1-9][0-9]*$/) !== null &&
+        num.value.match(/^[1-9][0-9]*$/) !== null) {
+      btn.classList.remove('disabled');
+    } else {
+      btn.classList.add('disabled');
+    }
   }
 
   btn.addEventListener('click', function() {
