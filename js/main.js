@@ -8,12 +8,19 @@
   var result = document.getElementById('result');
   var reset = document.getElementById('reset');
 
+  function checkInput() {
+  }
+
   btn.addEventListener('click', function() {
     var payLess;
     var short;
     var payMore;
     var over;
     var str;
+
+    if (this.classList.contains('disabled') === true) {
+      return;
+    }
 
     payLess = Math.floor((price.value / num.value) / unit.value) * unit.value;
     short = price.value - (payLess * num.value);
@@ -29,4 +36,7 @@
     }
     result.textContent = str;
   });
+
+  price.addEventListener('keyup', checkInput);
+  num.addEventListener('keyup', checkInput);
 })();

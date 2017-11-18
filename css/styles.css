@@ -43,6 +43,10 @@ body {
   color: #fff;
 }
 
+#btn.disabled {
+  opacity: 0.5;
+}
+
 .input-area {
   font-size: 0;
   margin-bottom: 20px;
